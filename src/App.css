@@ -40,3 +40,20 @@
 .read-the-docs {
   color: #888;
 }
+
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+  gap: 1rem;
+}
+
+.container > * {
+    flex: 1 1 40%;
+}
+
+@media (min-width: 768px) {
+    .container > * {
+        flex: 1 1 25%;
+    }
+}

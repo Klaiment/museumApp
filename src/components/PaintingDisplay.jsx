@@ -1,14 +1,14 @@
 import s from './styles/PaintingDisplay.module.css'
 
-export const PaintingDisplay = () => {
+export const PaintingDisplay = (key) => {
     return (
         <>
             <div className={s.paintContainer}>
                 <img className={s.image}
-                     src="https://lh3.googleusercontent.com/SwwiVAxnwFE_s-k7-bPOZ6jnGfcuVDJoZ-ofLb0Zispb-mJdsfasrE1nTPRcGDPwyEqY0txKpjPcAWaIIltYvvPtDA8=s0"
+                     src={key.webImage.url}
                      alt=""/>
-                <p className={s.title}>Portrait of Don Ramón Satué</p>
-                <p className={s.author}>Francisco de Goya</p>
+                <p className={s.title}>{key.title}</p>
+                <p className={s.author}>{key.principalOrFirstMaker}</p>
             </div>
         </>
     )
