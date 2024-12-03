@@ -1,6 +1,5 @@
 import s from "./styles/MoreDetails.module.css";
 export const MoreDetails = ({detail,setIsNeedDetails}) => {
-    console.log(detail);
   return <div className={s.moreDetailsContainer}>
     <span className={s.closeButton} onClick={()=>setIsNeedDetails(false)}>❌</span>
     <p className={s.moreDetailsTitle}>
