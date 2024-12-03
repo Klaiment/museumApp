@@ -1,35 +1,38 @@
 .pageButton {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 5px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 5px;
 }
 
 .pageButton > button {
-    background-color: #3c4045;
-    border: 1px solid #495057;
-    color: #f8f9fa;
-    padding: 8px 12px;
-    cursor: pointer;
-    border-radius: 6px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
-    transition: background-color 0.3s ease, transform 0.2s ease, box-shadow 0.3s ease;
+  background-color: #3c4045;
+  border: 1px solid #495057;
+  color: #f8f9fa;
+  padding: 8px 12px;
+  cursor: pointer;
+  border-radius: 6px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  transition:
+    background-color 0.3s ease,
+    transform 0.2s ease,
+    box-shadow 0.3s ease;
 }
 
 .pageButton > button:hover {
-    background-color: #495057;
-    transform: translateY(-2px);
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  background-color: #495057;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
 }
 
 .pageButton > button.active {
-    background-color: #007bff;
-    color: white;
-    border: 1px solid #0056b3;
-    box-shadow: 0 4px 8px rgba(0, 123, 255, 0.4);
+  background-color: #007bff;
+  color: white;
+  border: 1px solid #0056b3;
+  box-shadow: 0 4px 8px rgba(0, 123, 255, 0.4);
 }
 
 .pageButton > button:focus {
-    outline: none;
-    box-shadow: 0 0 0 3px rgba(0, 123, 255, 0.5);
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(0, 123, 255, 0.5);
 }

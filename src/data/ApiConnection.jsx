@@ -1,15 +1,32 @@
-import {useEffect} from "react";
+import { useEffect, useState } from "react";
 import axios from "axios";
 
-export const ApiConnection = ({setArtObjects, maxResults, resultPage}) => {
-    useEffect(() => {
-        async function fetchData() {
-            const response = await axios.get(`https://www.rijksmuseum.nl/api/en/collection?key=8QQ9KcWz&ps=${maxResults}&p=${resultPage}`);
-            setArtObjects(response.data.artObjects);
-        }
-        fetchData();
-    }, [resultPage, maxResults]);
+export const ApiConnection = ({
+  setArtObjects,
+  maxResults,
+  resultPage,
+  searchQuery,
+  setLoading,
+}) => {
+  useEffect(() => {
+    async function fetchData() {
+      setLoading(true);
+      await axios
+        .get(
+          `https://www.rijksmuseum.nl/api/en/collection?key=8QQ9KcWz&ps=${maxResults}&p=${resultPage}${searchQuery ? `&q=${searchQuery}` : ""}`,
+        )
+        .then((response) => {
+          setArtObjects(response.data.artObjects);
+        })
+        .catch((error) => {
+          console.error(error);
+        })
+        .finally(() => {
+          setLoading(false);
+        });
+    }
+    fetchData();
+  }, [resultPage, maxResults, searchQuery]);
 
-
-    return false
-}
+  return false;
+};
