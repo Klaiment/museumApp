@@ -1,11 +1,11 @@
 @font-face {
-  font-family: 'Rijksmuseum-Bold';
-  src: url('./assets/fonts/Rijksmuseum-Bold.woff2') format('woff2');
+  font-family: "Rijksmuseum-Bold";
+  src: url("./assets/fonts/Rijksmuseum-Bold.woff2") format("woff2");
   font-weight: bold;
   font-style: normal;
 }
 :root {
-  font-family:'Rijksmuseum-Bold', sans-serif;
+  font-family: "Rijksmuseum-Bold", sans-serif;
   line-height: 1.5;
   font-weight: 400;
 
