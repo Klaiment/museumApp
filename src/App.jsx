@@ -24,24 +24,24 @@ function App() {
       />
 
       <>
-        <h1 className="heading-1">rijksmuseum</h1>
-        <SearchBar searchQuery={searchQuery} setSearchQuery={setSearchQuery} />
-        <div className={"container"}>
-          {loading ? (
-            <div className={"loading"}><span className="loader"></span></div>
-          ) : (
-            artObjects.length > 0 &&
-            artObjects.map((artObject) => (
-              <PaintingDisplay key={artObject.id} {...artObject} />
-            ))
-          )}
-        </div>
-        <div className={"paginatorContainer"}>
-          <Paginator setResultPage={setResultPage} resultPage={resultPage} />
-        </div>
+          <a href="/" className={"innertLink"}><h1 className="heading-1">rijksmuseum</h1></a>
+          <SearchBar searchQuery={searchQuery} setSearchQuery={setSearchQuery}/>
+          <div className={"container"}>
+              {loading ? (
+                  <div className={"loading"}><span className="loader"></span></div>
+              ) : (
+                  artObjects.length > 0 &&
+                  artObjects.map((artObject) => (
+                      <PaintingDisplay key={artObject.id} {...artObject} />
+                  ))
+              )}
+          </div>
+          <div className={"paginatorContainer"}>
+              <Paginator setResultPage={setResultPage} resultPage={resultPage}/>
+          </div>
       </>
-    </>
-  );
-}
+      </>
+        );
+        }
 
-export default App;
+        export default App;

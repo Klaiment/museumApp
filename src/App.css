@@ -90,3 +90,11 @@
     transform: rotate(360deg);
   }
 }
+
+.innertLink{
+    text-decoration: none;
+  color: white;
+}
+.innertLink:active{
+    color: white;
+}
