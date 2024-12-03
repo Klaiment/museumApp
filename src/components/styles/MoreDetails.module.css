@@ -1,0 +1,70 @@
+.moreDetailsContainer {
+  position: fixed;
+  width: 84vw;
+  height: 96.5vh;
+  background: rgba(0, 0, 0, 0.8);
+  z-index: 10;
+  top: 2%;
+border-radius: 10px;
+overflow-y: auto;
+    max-height: 100%;
+}
+
+.moreDetailsTitle{
+    font-family: "Rijksmuseum-Bold", sans-serif;
+    font-size: 1.5rem;
+    font-weight: bold;
+    top: 1.5rem;
+    padding: 0.2rem;
+    text-align: center;
+}
+
+.moreDetailsImage{
+    width: auto;
+    object-fit: cover;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    max-height: 800px;
+}
+
+@media screen and (max-width: 768px) {
+    .moreDetailsImage{
+        width: 98%;
+        object-fit: cover;
+        border-radius: 10px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        max-height: 800px;
+    }
+}
+.closeButton{
+    position: absolute;
+    top: 0.4rem;
+    right: 0.4rem;
+    cursor: pointer;
+}
+
+.decription{
+    font-family: "Rijksmuseum-Bold", sans-serif;
+    font-size: 0.7rem;
+    font-weight: bold;
+    padding: 0.2rem;
+}
+
+.date{
+    font-family: "Rijksmuseum-Bold", sans-serif;
+    font-size: 0.7rem;
+    font-weight: bold;
+    padding: 0.2rem;
+}
+
+.author{
+    font-family: "Rijksmuseum-Bold", sans-serif;
+    font-size: 0.8rem;
+    font-weight: bold;
+    text-decoration: underline;
+}
+.dimension{
+    font-family: "Rijksmuseum-Bold", sans-serif;
+    font-size: 0.6rem;
+    font-weight: bold;
+}
