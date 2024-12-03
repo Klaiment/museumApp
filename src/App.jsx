@@ -12,20 +12,21 @@ function App() {
 
 
     return (
-      <>
-          <ApiConnection setArtObjects={setArtObjects} maxResults={maxResults} resultPage={resultPage}/>
-        <div className={"container"}>
-          { artObjects.length > 0 &&
-            artObjects.map((artObject) => (
-                <PaintingDisplay key={artObject.id} {...artObject} />
-            ))
-          }
-        </div>
-          <div className={"paginatorContainer"}>
-              <Paginator setResultPage={setResultPage} resultPage={resultPage}/>
-          </div>
-      </>
-  )
+        <>
+            <h1 className="heading-1">rijksmuseum</h1>
+            <ApiConnection setArtObjects={setArtObjects} maxResults={maxResults} resultPage={resultPage}/>
+            <div className={"container"}>
+                {artObjects.length > 0 &&
+                    artObjects.map((artObject) => (
+                        <PaintingDisplay key={artObject.id} {...artObject} />
+                    ))
+                }
+            </div>
+            <div className={"paginatorContainer"}>
+                <Paginator setResultPage={setResultPage} resultPage={resultPage}/>
+            </div>
+        </>
+    )
 }
 
 export default App

@@ -34,7 +34,7 @@
 
 @media (max-width: 768px) {
     .landscape .image {
-        width: 100vw;
+        width: 75vw;
         height: auto;
     }
 }

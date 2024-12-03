@@ -4,7 +4,13 @@
   padding: 2rem;
   text-align: center;
 }
-
+.heading-1 {
+    font-size: calc(2.5rem + 5.625 * ((100vw - 20rem) / 100));
+    font-weight: 700;
+    line-height: .9;
+    text-transform: uppercase;
+    word-break: break-word;
+}
 .logo {
   height: 6em;
   padding: 1.5em;
