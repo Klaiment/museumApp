@@ -30,3 +30,11 @@
     margin: 10px 0;
     font-style: italic;
 }
+
+
+@media (max-width: 768px) {
+    .landscape .image {
+        width: 75vw;
+        height: auto;
+    }
+}
