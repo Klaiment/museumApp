@@ -95,6 +95,9 @@
     text-decoration: none;
   color: white;
 }
+.innertLink:hover{
+  color: white;
+}
 .innertLink:active{
     color: white;
 }
