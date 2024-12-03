@@ -6,8 +6,8 @@ export const PaintingDisplay = ({
   setDetails,
   setIsNeedDetails,
 }) => {
-  const isLandscape = artObject?.webImage?.width > artObject?.webImage?.height;
-  const showDetails = async () => {
+const isLandscape = artObject?.webImage?.width && artObject?.webImage?.height && artObject.webImage.width > artObject.webImage.height;
+const showDetails = async () => {
 
     await axios.get(`https://www.rijksmuseum.nl/api/en/collection/${artObject?.objectNumber}?key=8QQ9KcWz`).then((response) => {
       setDetails(response.data.artObject);
