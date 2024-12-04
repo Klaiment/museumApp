@@ -13,7 +13,7 @@ export const ApiConnection = ({
       setLoading(true);
       await axios
         .get(
-          `https://www.rijksmuseum.nl/api/en/collection?key=8QQ9KcWz&ps=${maxResults}&p=${resultPage}${searchQuery ? `&q=${searchQuery}` : ""}`,
+          `https://www.rijksmuseum.nl/api/en/collection?key=${import.meta.env.VITE_API_KEY}&ps=${maxResults}&p=${resultPage}${searchQuery ? `&q=${searchQuery}` : ""}`,
         )
         .then((response) => {
           setArtObjects(response.data.artObjects);

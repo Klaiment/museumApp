@@ -16,23 +16,21 @@ function App() {
   const [isNeedDetails, setIsNeedDetails] = useState(false);
   const [details, setDetails] = useState(null);
 
-
   useEffect(() => {
-
     if (isNeedDetails) {
-      document.documentElement.style.overflow = 'hidden';
-    }else {
-        document.documentElement.style.overflow = 'auto';
+      document.documentElement.style.overflow = "hidden";
+    } else {
+      document.documentElement.style.overflow = "auto";
     }
     const handleKeyDown = (event) => {
-      if (event.key === 'Escape' && isNeedDetails) {
+      if (event.key === "Escape" && isNeedDetails) {
         setIsNeedDetails(false);
       }
     };
 
-    window.addEventListener('keydown', handleKeyDown);
+    window.addEventListener("keydown", handleKeyDown);
     return () => {
-      window.removeEventListener('keydown', handleKeyDown);
+      window.removeEventListener("keydown", handleKeyDown);
     };
   }, [isNeedDetails]);
   return (
@@ -41,7 +39,7 @@ function App() {
         <MoreDetails detail={details} setIsNeedDetails={setIsNeedDetails} />
       )}
 
-      <div className={`${isNeedDetails && 'blur'}`}>
+      <div className={`${isNeedDetails && "blur"}`}>
         <ApiConnection
           setLoading={setLoading}
           setArtObjects={setArtObjects}
