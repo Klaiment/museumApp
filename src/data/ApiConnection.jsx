@@ -9,6 +9,9 @@ export const ApiConnection = ({
   setLoading,
 }) => {
   useEffect(() => {
+    if (searchQuery && searchQuery.length < 3) {
+        return;
+    }
     async function fetchData() {
       setLoading(true);
       await axios

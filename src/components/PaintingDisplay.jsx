@@ -25,7 +25,8 @@ export const PaintingDisplay = ({
     setIsNeedDetails(true);
   };
   return (
-    <>
+      artObject?.hasImage && artObject?.webImage?.url.includes('http') && (
+          <>
       <div
         className={`${s.paintContainer} ${isLandscape ? s.landscape : ""}`}
         onClick={showDetails}
@@ -46,5 +47,6 @@ export const PaintingDisplay = ({
         </div>
       </div>
     </>
+      )
   );
 };
