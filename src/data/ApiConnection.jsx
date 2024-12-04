@@ -10,13 +10,13 @@ export const ApiConnection = ({
 }) => {
   useEffect(() => {
     if (searchQuery && searchQuery.length < 3) {
-        return;
+      return;
     }
     async function fetchData() {
       setLoading(true);
       await axios
         .get(
-          `https://www.rijksmuseum.nl/api/en/collection?key=${import.meta.env.VITE_API_KEY}&ps=${maxResults}&p=${resultPage}${searchQuery ? `&q=${searchQuery}` : ""}`,
+          `/.netlify/functions/get-collection?ps=${maxResults}&p=${resultPage}${searchQuery ? `&q=${searchQuery}` : ""}`,
         )
         .then((response) => {
           setArtObjects(response.data.artObjects);
