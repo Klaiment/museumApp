@@ -55,10 +55,10 @@ function App() {
             resultPage={resultPage}
             searchQuery={searchQuery}
         />
-        <a href="/" className={"innertLink"}>
-          <h1 className="heading-1">rijksmuseum</h1>
-        </a>
-        <SearchBar searchQuery={searchQuery} setSearchQuery={setSearchQuery}/>
+          <h1 className="heading-1">        <a href="/" className={"innertLink"}>
+            rijksmuseum      </a>
+          </h1>
+      <SearchBar searchQuery={searchQuery} setSearchQuery={setSearchQuery}/>
         <div className={"container"}>
           {loading ? (
               <div className={"loading"}>
