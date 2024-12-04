@@ -36,7 +36,7 @@ className={s.firstLoading_voile}
                 className={s.firstLoading_text_container}
             >
                 <h1 className={s.firstLoading_text_title}>
-                    Bienvenue au Rijksmuseum
+                    Bienvenue au RIJKSMUSEUM
                 </h1>
                 <p className={s.firstLoading_text_subtitle}>Nous vous souhaitons une excellente visite !</p>
             </div>
