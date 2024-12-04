@@ -14,7 +14,7 @@ export const PaintingDisplay = ({
   const showDetails = async () => {
     await axios
       .get(
-        `https://www.rijksmuseum.nl/api/en/collection/${artObject?.objectNumber}?key=${import.meta.env.VITE_API_KEY}`,
+        `/.netlify/functions/get-details?objectNumber=${artObject?.objectNumber}`,
       )
       .then((response) => {
         setDetails(response.data.artObject);
@@ -25,28 +25,29 @@ export const PaintingDisplay = ({
     setIsNeedDetails(true);
   };
   return (
-      artObject?.hasImage && artObject?.webImage?.url.includes('http') && (
-          <>
-      <div
-        className={`${s.paintContainer} ${isLandscape ? s.landscape : ""}`}
-        onClick={showDetails}
-      >
-        <div className={s.imageContainer}>
-          <img
-            className={s.image}
-            src={
-              artObject?.webImage?.url ||
-              "https://ih1.redbubble.net/image.4905811447.8675/flat,750x,075,f-pad,750x1000,f8f8f8.jpg"
-            }
-            alt=""
-          />
-          <div className={s.overlay}>
-            <p className={s.title}>{artObject.title}</p>
-            <p className={s.author}>{artObject.principalOrFirstMaker}</p>
+    artObject?.hasImage &&
+    artObject?.webImage?.url.includes("http") && (
+      <>
+        <div
+          className={`${s.paintContainer} ${isLandscape ? s.landscape : ""}`}
+          onClick={showDetails}
+        >
+          <div className={s.imageContainer}>
+            <img
+              className={s.image}
+              src={
+                artObject?.webImage?.url ||
+                "https://ih1.redbubble.net/image.4905811447.8675/flat,750x,075,f-pad,750x1000,f8f8f8.jpg"
+              }
+              alt=""
+            />
+            <div className={s.overlay}>
+              <p className={s.title}>{artObject.title}</p>
+              <p className={s.author}>{artObject.principalOrFirstMaker}</p>
+            </div>
           </div>
         </div>
-      </div>
-    </>
-      )
+      </>
+    )
   );
 };

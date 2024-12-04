@@ -11,11 +11,11 @@
   text-transform: uppercase;
   word-break: break-word;
   display: inline-block;
-    position: relative;
+  position: relative;
 }
 
 .heading-1::after {
-  content: '';
+  content: "";
   position: absolute;
   bottom: 0;
   left: 0;

@@ -7,7 +7,7 @@ import { ApiConnection } from "./data/ApiConnection.jsx";
 import { Paginator } from "./components/Paginator.jsx";
 import { SearchBar } from "./components/SearchBar.jsx";
 import { MoreDetails } from "./components/MoreDetails.jsx";
-import {FirstLoading} from "./components/FirstLoading.jsx";
+import { FirstLoading } from "./components/FirstLoading.jsx";
 function App() {
   const [artObjects, setArtObjects] = useState({});
   const [maxResults, setMaxResults] = useState(20);
@@ -35,33 +35,31 @@ function App() {
     };
   }, [isNeedDetails]);
 
-
-
-
   return (
     <>
       {isNeedDetails && (
         <MoreDetails detail={details} setIsNeedDetails={setIsNeedDetails} />
       )}
-      {firstLoad && (
-          <FirstLoading setFirstLoad={setFirstLoad}/>
-      )}
+      {firstLoad && <FirstLoading setFirstLoad={setFirstLoad} />}
 
       <div className={`${isNeedDetails && "blur"} ${firstLoad && "hidden"}`}>
         <ApiConnection
-            setLoading={setLoading}
-            setArtObjects={setArtObjects}
-            maxResults={maxResults}
-            resultPage={resultPage}
-            searchQuery={searchQuery}
+          setLoading={setLoading}
+          setArtObjects={setArtObjects}
+          maxResults={maxResults}
+          resultPage={resultPage}
+          searchQuery={searchQuery}
         />
-          <h1 className="heading-1">        <a href="/" className={"innertLink"}>
-            rijksmuseum      </a>
-          </h1>
-      <SearchBar searchQuery={searchQuery} setSearchQuery={setSearchQuery}/>
+        <h1 className="heading-1">
+          {" "}
+          <a href="/" className={"innertLink"}>
+            rijksmuseum{" "}
+          </a>
+        </h1>
+        <SearchBar searchQuery={searchQuery} setSearchQuery={setSearchQuery} />
         <div className={"container"}>
           {loading ? (
-              <div className={"loading"}>
+            <div className={"loading"}>
               <span className="loader"></span>
             </div>
           ) : (
