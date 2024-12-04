@@ -1,4 +1,7 @@
 # example netlify.toml
+[functions]
+node_bundler = "esbuild"
+
 [build]
 command = "npm run build"
 functions = "netlify/functions"
@@ -25,5 +28,7 @@ port = 8888                     # Port that the dev server will be listening on
 targetPort = 5174
 publish = "dist"                # Folder with the static content for _redirect file
 functions = "netlify/functions"
+
+
 
 ## more info on configuring this file: https://ntl.fyi/file-based-build-config
