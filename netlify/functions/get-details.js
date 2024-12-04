@@ -2,10 +2,10 @@ import "dotenv/config";
 import axios from "axios";
 
 export const handler = async (event) => {
-  const params = event.queryStringParameters;
+    const params = event.queryStringParameters;
     try {
         const response = await axios.get(
-            `https://www.rijksmuseum.nl/api/en/collection?key=${process.env.VITE_API_KEY}&ps=${params.ps}&p=${params.p}${params.q ? `&q=${params.q}` : ""}`
+            `https://www.rijksmuseum.nl/api/en/collection/${params?.objectNumber}?key=${process.env.VITE_API_KEY}`
         );
         return {
             statusCode: 200,

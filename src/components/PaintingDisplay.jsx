@@ -14,7 +14,7 @@ export const PaintingDisplay = ({
   const showDetails = async () => {
     await axios
       .get(
-        `https://www.rijksmuseum.nl/api/en/collection/${artObject?.objectNumber}?key=${import.meta.env.VITE_API_KEY}`,
+        `/.netlify/functions/get-details?objectNumber=${artObject?.objectNumber}`,
       )
       .then((response) => {
         setDetails(response.data.artObject);
