@@ -19,7 +19,7 @@ export const FirstLoading = ({ setFirstLoad }) => {
         onCanPlay={() => {
           const video = document.querySelector("video");
           if (video) {
-            video.playbackRate = 3;
+            video.playbackRate = 4;
           }
         }}
         onEnded={() => setFirstLoad(false)}
