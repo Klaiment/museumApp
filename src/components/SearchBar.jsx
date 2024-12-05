@@ -7,9 +7,12 @@ export const SearchBar = ({ setSearchQuery, searchQuery }) => {
           type="text"
           placeholder={"Recherchez une oeuvre"}
           className={s.searchBar}
-          onChange={(e) => {
-            setSearchQuery(e.target.value);
+          onKeyDown={(e) => {
+              if (e.key == 'Enter') {
+                  setSearchQuery(e.target.value);
+              }
           }}
+
         />
       </div>
     </>
