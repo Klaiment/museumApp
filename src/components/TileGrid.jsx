@@ -29,9 +29,9 @@ export const TileGrid = ({ tiles }) => {
                         position: "absolute",
                         top: `${tile.y * tileHeight}px`,
                         left: `${tile.x * tileWidth}px`,
-                        width: `${tileWidth}px`, // Réduction légère pour ajouter un espace
-                        height: `${tileHeight}px`, // Idem pour la hauteur
-                        objectFit: "fill", // Garder l'image sans chevauchement
+                        width: `${tileWidth}px`,
+                        height: `${tileHeight}px`,
+                        objectFit: "fill",
                         backgroundColor: "transparent",
                     }}
                 />
