@@ -8,7 +8,7 @@ export const MoreDetails = ({ detail, setIsNeedDetails }) => {
       <p className={s.moreDetailsTitle}>{detail?.title}</p>
       <img src={detail.webImage.url} className={s.moreDetailsImage} />
       <p className={s.dimension}>{detail?.subTitle}</p>
-      <p className={s.decription}>{detail?.description}</p>
+      <p className={s.decription}>{detail?.label.description}</p>
       <p className={s.date}>{detail?.dating.presentingDate}</p>
       <p className={s.author}>
         {detail.principalMakers.map((maker) => maker.name).join(", ")}
